@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Collection;
 
 // Classe para realizar testes
-public class Main {
+public class EstudoArrayList {
 
 	public static void main(String[] args) {
 		
