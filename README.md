@@ -1,4 +1,4 @@
-# estudo_colecoes
+# Estudo Java Collection
 Este respostório é para compartilhar um pouco do conhecimento que tenho sobre Java Collection Framework.
 
 Para compilar as classes basta ir no terminal/Prompt de Comandos e executar:
