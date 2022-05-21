@@ -1,5 +1,5 @@
  // Classe que será usada para mostrar como utilizar os métodos de ArrayList
-public class Pessoa {
+public class Pessoa{
 
 	private int id;
 	private String nome;
@@ -46,7 +46,23 @@ public class Pessoa {
 	}
 
 	@Override
+	public int hashCode(){
+		return this.getId() + this.getNome().length() + this.getEmail().length() + this.getSenha().length();
+	}
+
+	@Override
+	public boolean equals(Object o){
+		if(o == null) return false;
+		if(this == o) return true;
+		if(this.getClass() != o.getClass()) return false;
+
+		Pessoa p = (Pessoa)o;
+
+		return this.getId() == p.getId() && this.getNome().equals(p.getNome()) && this.getEmail().equals(p.getEmail());
+	}
+
+	@Override
 	public String toString() {
-		return "[Pessoa Id: " + this.id + "\nNome: " + this.nome + "\nEmail: " + this.email + "\nSenha: " + this.senha + "]";
+		return "[Pessoa Id: " + this.id + " Nome: " + this.nome + " Email: " + this.email + " Senha: " + this.senha + "]";
 	}
 }
